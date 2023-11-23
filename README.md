@@ -4,13 +4,9 @@ Description
 
 This project is for self-improvement and practice in order to provide myself with confidence within this industry.
 
-A Coding Quiz has been created using Google Fonts and the Bootstrap library with features such as:
+A daily planner was created with HTML, JavaScript, Bootstrap, JQuery, and Dayjs libraries to add important events.
 
-Timer
-
-High Score Ranking
-
-Initials Input
+A great way to manage time effectively with colour coded time blocks.
 
 
 Installation
@@ -22,15 +18,19 @@ To access the project, please enter the Live Page URL found below.
 
 Usage
 
-The user must click on Start the Quiz to begin.
+The user will be able to see the current date and time once the planner is opened.
 
-The in-game timer will count down from 100 seconds.
+There are time slots in which the user may input their important event that they wish to have saved.
 
-Any correct answers will add time to the clock.
+The time slots are color coded in relative to the current time of the user:
 
-Any incorrect answers will remove time from the clock.
+Grey: Past
 
-Once the quiz is completed, the user may input their initials to log their high score and try again if they wish.
+Red: Current Hour
+
+Green: Future
+
+Once the user inputs their event, they may click on the save button within that timeblock to have it saved in local storage.
 
 
 Live URL:
