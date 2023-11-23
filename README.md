@@ -43,6 +43,7 @@ https://github.com/arkenwald/coding-quiz
 
 Screenshot of Live Page:
 
+<img width="960" alt="screenshot1" src="https://github.com/arkenwald/work-day-scheduler/assets/149994852/8b29d2f5-793b-456a-9472-6e72800a863c">
 
 
 
