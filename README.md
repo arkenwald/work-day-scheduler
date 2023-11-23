@@ -43,21 +43,8 @@ https://github.com/arkenwald/coding-quiz
 
 Screenshot of Live Page:
 
-Quiz Main Page
 
-![screenshotmain](https://github.com/arkenwald/coding-quiz/assets/149994852/3488e3a4-8848-4d2a-b390-5e5399bdbe70)
 
-During Quiz
-
-![screenshotquiz](https://github.com/arkenwald/coding-quiz/assets/149994852/b61164c4-12e8-4549-a392-8f1e1257c7ea)
-
-Initials Input for High Score
-  
-![screenshotinput](https://github.com/arkenwald/coding-quiz/assets/149994852/6499a0d0-6faf-4ec5-9791-735d57f0c3dc)
-
-High Score Rankings
-
-![screenshothighscores](https://github.com/arkenwald/coding-quiz/assets/149994852/4074096d-9f1c-4440-8271-ee4719d416ee)
 
 
 Credits
