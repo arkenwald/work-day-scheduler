@@ -55,19 +55,17 @@ https://github.com/pnguyen412
 
 Website Resources:
 
-[https://www.w3schools.com/js/js_math.asp](http://meyerweb.com/eric/tools/css/reset/)
+https://day.js.org/docs/en/get-set/hour
 
-[https://www.w3schools.com/jsref/jsref_charat.asp](https://getbootstrap.com/docs/4.0/layout/grid/)
+https://day.js.org/docs/en/display/format
 
-https://www.w3schools.com/js/js_loop_for.asp
+https://fontawesome.com/
 
-https://www.w3schools.com/js/js_objects.asp
+https://www.freecodecamp.org/news/javascript-foreach-js-array-for-each-example/
 
-https://fonts.google.com/
+https://www.w3schools.com/jquery/event_ready.asp
 
-https://getbootstrap.com/
-
-http://meyerweb.com/eric/tools/css/reset/ 
+https://www.w3schools.com/jsref/jsref_split.asp
 
 
 License
