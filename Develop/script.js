@@ -1,77 +1,51 @@
-//let update = dayjs();
-
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
-  
-  let hourNow = dayjs().format('H');
 
-  function colorState() {
-    $('.time-block').each(function () {
-      let hourBlock = parseInt(this.id);
-      $(this).toggleClass('past', hourBlock < hourNow);
-      $(this).toggleClass('present', hourBlock === hourNow);
-      $(this).toggleClass('future', hourBlock > hourNow);
-    });
-  }
-
-  function changeColor() {
-    $('.time-block').each(function () {
-      let hourBlock = parseInt(this.id);
-      if (hourBlock == hourNow) {
-        $(this).removeClass('past future').addClass('present');
-      } else if (hourBlock < hourNow) {
-        $(this).removeClass('future present').addClass('past');
-      } else {
-        $(this).removeClass('past present').addClass('future');
-      });
-  }
-
-  function enterText() {
-    $('.saveBtn').on('click', function() {
-      let input = $(this).parent().attr('id');
-      let inputValue = $(this).siblings('.description').val();
-      localStorage.setItem(input, inputvalue);
-    });
-  }
-
-  $('.time-block').each(function() {
-    let input = $(this).attr('id');
-    let inputValue = localStorage.getItem(input);
-  });
-
-
-
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-//
-// TODO: Add code to apply the past, present, or future class to each time
-// block by comparing the id to the current hour. HINTS: How can the id
-// attribute of each time-block be used to conditionally add or remove the
-// past, present, and future classes? How can Day.js be used to get the
-// current hour in 24-hour time?
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-//
-// TODO: Add code to display the current date in the header of the page.
-
+//timer and date displayed using dayjs
 let timerInterval = setInterval(function () {
-
   let update = dayjs();
   $('#date').text(update.format('MMMM D, YYYY'));
   $('#time').text(update.format('hh:mm:ss a'))
 }, 1000);
-
+//ensures that the script will only run once the page DOM is ready for js code to execute
+$(document).ready(function () {
+  // id list
+  let ids = ['hour-09', 'hour-10', 'hour-11', 'hour-12', 'hour-13', 'hour-14', 'hour-15', 'hour-16', 'hour-17'];
+  //get the current dayJS hour
+  let dayjsHour = dayjs().hour();
+  //iterate over each ID
+  ids.forEach(function (id) {
+    //extract the numeric part from the id
+    let hourId = parseInt(id.split('-')[1]);
+    //compare the numeric part with the dayJS hour
+    if (hourId < dayjsHour) {
+      $("#" + id).addClass("past");
+    } else if (hourId === dayjsHour) {
+      $("#" + id).addClass("present");
+    } else {
+      $("#" + id).addClass("future");
+    }
   });
+});
 
+//grabs values from time and value divs and saves them to local storage
+$(".saveBtn").click(function (event) {
+  event.preventDefault();
+  let value = $(this).siblings(".description").val();
+  let time = $(this).parent().attr("id").split("-")[1];
+  localStorage.setItem(time, value);
+  // Logging the value to console
+  console.log(value);
+});
 
-  colorState();
-  enterText();
-  changeColor();
+//retrieves items from local storage and sets them in proper places
+$("#hour-09 .description").val(localStorage.getItem("09"));
+$("#hour-10 .description").val(localStorage.getItem("10"));
+$("#hour-11 .description").val(localStorage.getItem("11"));
+$("#hour-12 .description").val(localStorage.getItem("12"));
+$("#hour-13 .description").val(localStorage.getItem("13"));
+$("#hour-14 .description").val(localStorage.getItem("14"));
+$("#hour-15 .description").val(localStorage.getItem("15"));
+$("#hour-16 .description").val(localStorage.getItem("16"));
+$("#hour-17 .description").val(localStorage.getItem("17"));
