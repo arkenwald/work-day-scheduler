@@ -35,11 +35,11 @@ Once the user inputs their event, they may click on the save button within that 
 
 Live URL:
 
-https://arkenwald.github.io/coding-quiz/
+https://arkenwald.github.io/work-day-scheduler/
 
 GitHub Repository:
 
-https://github.com/arkenwald/coding-quiz
+https://github.com/arkenwald/work-day-scheduler
 
 Screenshot of Live Page:
 
