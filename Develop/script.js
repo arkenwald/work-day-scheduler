@@ -4,6 +4,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  
   let hourNow = dayjs().format('H');
 
   function colorState() {
@@ -24,8 +25,23 @@ $(function () {
         $(this).removeClass('future present').addClass('past');
       } else {
         $(this).removeClass('past present').addClass('future');
+      });
+  }
+
+  function enterText() {
+    $('.saveBtn').on('click', function() {
+      let input = $(this).parent().attr('id');
+      let inputValue = $(this).siblings('.description').val();
+      localStorage.setItem(input, inputvalue);
     });
   }
+
+  $('.time-block').each(function() {
+    let input = $(this).attr('id');
+    let inputValue = localStorage.getItem(input);
+  });
+
+
 
 // TODO: Add a listener for click events on the save button. This code should
 // use the id in the containing time-block as a key to save the user input in
@@ -53,3 +69,9 @@ let timerInterval = setInterval(function () {
   $('#time').text(update.format('hh:mm:ss a'))
 }, 1000);
 
+  });
+
+
+  colorState();
+  enterText();
+  changeColor();
